@@ -1,7 +1,7 @@
 Flask-Casbin
 ============
 
-[![Build Status](https://travis-ci.org/daymient/Flask-Casbin.png?branch=master)](https://travis-ci.org/daymient/Flask-Casbin)
+[![Build Status](https://travis-ci.org/daymien/Flask-Casbin.png?branch=master)](https://travis-ci.org/daymien/Flask-Casbin)
 
 
 Flask-Casbin is an extension that provide Casbin ACL functionality to your Flask project
