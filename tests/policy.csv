@@ -1,0 +1,2 @@
+p, user:alice, data:1, read
+p, user:bob, data:2, write

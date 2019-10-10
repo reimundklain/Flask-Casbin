@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "Flask-Casbin"
+version = "0.1.0"
+description = "Flask Casbin Integration"
+authors = ["Reimund Klain <reimund.klain@condevtec.de>"]
+license = "Apache 2.0"
+readme = "README.md"
+repository = "https://github.com/daymien/Flask-Casbin"
+homepage = "https://github.com/daymien/Flask-Casbin"
+keywords = ["flask", "casbin", "acl", "rbac", "abac", "auth", "authz", "authorization", "access control", "permission"]
+classifiers = [
+    "Environment :: Web Environment",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+flask = "^1.1"
+casbin = "^0.8.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
