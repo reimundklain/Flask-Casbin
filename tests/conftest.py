@@ -1,31 +1,28 @@
 # -*- coding: utf-8 -*-
 
-import pytest
-from flask import Flask
-from flask_casbin import Casbin
+#import io
+#import pytest
+#from flask import Flask
+#from flask_casbin import CasbinManager, IOAdapter
 
 
-@pytest.fixture(scope='session')
-def app(request):
-    config=dict(
-        TESTING=True,
-    )
-    app = Flask(__name__)
-    app.config.update(config)
-    ctx = app.app_context()
-    ctx.push()
-
-    def teardown():
-        ctx.pop()
-    request.addfinalizer(teardown)
-    return app
-
-
-@pytest.fixture(scope='session')
-def acl(app):
-    app.config.update(dict(
-        CASBIN_MODEL_CONF="./tests/model.conf",
-        CASBIN_POLICY_CSV="./tests/policy.csv",
-    ))
-    return Casbin(app)
-
+#@pytest.fixture(scope='module')
+#def test_client():
+#    config=dict(
+#        TESTING=True,
+#        CASBIN_MODEL_CONF="./tests/model.conf"
+#    )
+#    app = Flask(__name__)
+#    app.config.update(config)
+#    manager = CasbinManager(app)
+#
+#    @manager.policy_loader
+#    def load():
+#        with open("./tests/model.conf", "rb") as fd:
+#            return IOAdapter(fd)
+#
+#    test_client = app.test_client()
+#    ctx = app.app_context()
+#    ctx.push()
+#    yield test_client
+#    ctx.pop()
