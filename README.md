@@ -35,8 +35,7 @@ acl = CasbinManager(app)
 
 @acl.policy_loader
 def load_policy():
-    # some readable object for example from current_user 
-    # e.g some based on user related policy io.BytesIO()
+    # some readable object for example based on current user
     return IOAdapter(current_user.policy())
 
 @app.route('/data/<id_:int>')
