@@ -23,22 +23,27 @@ Example
 This is an example Flask application:
 
 ```python
-from flask import Flask
-from flask_casbin import Casbin
+import io
+from flask import Flask, abort
+from flask_casbin import CasbinManager, IOAdapter, current_enforcer
 
 app = Flask(__name__)
 
 # config
 app.config["CASBIN_MODEL_CONF"] = "./model.conf"
-app.config["CASBIN_POLICY_CSV"] = "./policy.csv"
 
 # create acl
-acl = Casbin(app)
+acl = CasbinManager(app)
+
+@acl.policy_loader
+def load_policy():
+    with open("./policy.csv") as fd:
+        return IOAdapter(current_user.policy)
 
 @app.route('/data/<id_:int>')
 def get_data(id_):
     # curent_user ist global authenticated user
-    acl.enforce("user:%s" % current_user.name, "data:%d" % id_, "read") or abort(401)
+    current_enforcer.enforce(f"user:{current_user.name}", f"data:{id}", "read") or abort(401)
 
     # Get data
     data = db.get_data(id_)
@@ -50,8 +55,8 @@ Todo
 ----
 
 * Decorators for ACL check
-* Policy adapters
-* Dynamic Policy Adapter (Flask-SQLAlchemy)
+* ~Policy adapters~
+* ~Dynamic Policy Adapter (Flask-SQLAlchemy)~
 * More tests
 
 Resources
