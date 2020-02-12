@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Flask-Casbin"
-version = "0.2.0"
+version = "0.2.1"
 description = "Flask Casbin Integration"
 authors = ["Reimund Klain <reimund.klain@condevtec.de>"]
 license = "Apache-2.0"
