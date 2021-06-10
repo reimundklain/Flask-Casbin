@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Flask-Casbin"
-version = "0.2.1"
+version = "0.3.0"
 description = "Flask Casbin Integration"
 authors = ["Reimund Klain <reimund.klain@condevtec.de>"]
 license = "Apache-2.0"
@@ -16,6 +16,8 @@ classifiers = [
     "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     "Topic :: Software Development :: Libraries :: Python Modules"
 ]
