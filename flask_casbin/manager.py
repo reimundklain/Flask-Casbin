@@ -42,5 +42,4 @@ class CasbinManager(object):
         ctx.enforcer = casbin.Enforcer(
             current_app.config.get("CASBIN_MODEL_CONF"),
             self.policy_callback(),
-            current_app.debug or current_app.testing
         )
