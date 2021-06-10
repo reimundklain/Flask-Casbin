@@ -1,3 +1,8 @@
+Official Version Available: 
+===========================
+
+https://github.com/pycasbin/flask-authz/
+
 Flask-Casbin
 ============
 
